@@ -1,9 +1,3 @@
-databases:
-  - name: lightdash-database
-    plan: free
-    database: lightdash
-    user: lightdash
-
 services:
   - type: web
     env: docker
@@ -23,7 +17,7 @@ services:
       - key: PGDATABASE
         fromDatabase:
           name: lightdash-database
-          property: database
+          property: databaseName
       - key: PGUSER
         fromDatabase:
           name: lightdash-database
@@ -38,3 +32,10 @@ services:
         value: true
       - key: LIGHTDASH_SECRET
         generateValue: true
+
+
+databases:
+  - name: lightdash-database
+    plan: free
+    databaseName: lightdash
+    user: lightdash
