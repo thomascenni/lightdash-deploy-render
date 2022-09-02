@@ -1,7 +1,7 @@
 databases:
   - name: lightdash-database
     plan: free
-    databaseName: lightdash
+    database: lightdash
     user: lightdash
 
 services:
@@ -23,7 +23,7 @@ services:
       - key: PGDATABASE
         fromDatabase:
           name: lightdash-database
-          property: databaseName
+          property: database
       - key: PGUSER
         fromDatabase:
           name: lightdash-database
