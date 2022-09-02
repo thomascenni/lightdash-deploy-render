@@ -1,9 +1,6 @@
-previewsEnabled: false
-
 databases:
   - name: lightdash-database
     plan: free
-    ipAllowList: []
     databaseName: lightdash
     user: lightdash
 
