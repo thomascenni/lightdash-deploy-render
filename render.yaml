@@ -17,7 +17,7 @@ services:
       - key: PGDATABASE
         fromDatabase:
           name: lightdash-database
-          property: databaseName
+          property: database
       - key: PGUSER
         fromDatabase:
           name: lightdash-database
